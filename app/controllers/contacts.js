@@ -7,6 +7,14 @@ export default Ember.Controller.extend({
   actions: {
     searchContacts(term, sort) {
       this.transitionToRoute('contacts', { queryParams: { term: term, sort: sort } });
+    },
+    updateContact(contactId, newManagerId) {
+      this.store.findRecord('contact', contactId).then(function(contact) {
+        contact.set('manager_id', newManagerId);
+        contact.save({ 'managerId': newManagerId });
+      });
+
+      this.transitionToRoute('contacts');
     }
   }
 });

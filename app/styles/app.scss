@@ -16,6 +16,8 @@ form {
   margin: 50px 0px;
 }
 
+/*************************** Contact List *****************************/
+
 ul.contacts-list {
   li {
     div.contact-row {
@@ -38,3 +40,23 @@ ul.contacts-list {
 ul.contacts-list ul img {
   width: 50px !important;
 }
+
+/*************************** End Contact List *****************************/
+
+/*************************** Drag and Drop *****************************/
+
+.accepts-drag {
+  background-color: green !important;
+}
+
+.is-dragging-object .contact-row {
+  background-color: #565656;
+}
+
+.draggable-object-target {
+  background-color: #D7D7D7;
+  text-align: center;
+  clear: both;
+}
+
+/*************************** End Drag and Drop *****************************/
