@@ -1,0 +1,23 @@
+// Fix for Roboto font path
+$roboto-font-path: '../assets/';
+
+// Materialize styles
+@import "materialize";
+
+#index-banner {
+  background-color: #1a237e;
+
+  h1.header {
+    color: white;
+  }
+}
+
+table {
+  tr {
+    td.phones {
+      span {
+        display: block;
+      }
+    }
+  }
+}
