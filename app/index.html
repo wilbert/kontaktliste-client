@@ -9,12 +9,25 @@
 
     {{content-for "head"}}
 
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
     <link rel="stylesheet" href="{{rootURL}}assets/kontakliste-client.css">
 
     {{content-for "head-footer"}}
   </head>
   <body>
+    <div class="section" id="index-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m9">
+            <h1 class="header center-on-small-only">Kontakliste</h1>
+            <h4 class="light red-text text-lighten-4 center-on-small-only">The smart way to manage your contacts.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
     {{content-for "body"}}
 
     <script src="{{rootURL}}assets/vendor.js"></script>
