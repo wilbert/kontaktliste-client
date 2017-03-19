@@ -12,14 +12,29 @@ $roboto-font-path: '../assets/';
   }
 }
 
+form {
+  margin: 50px 0px;
+}
+
 ul.contacts-list {
   li {
     div.contact-row {
+      img {
+        width: 90px;
+      },
       div.phones, div.address-info {
         span {
           display: block;
+          color: #CCC;
         }
       }
     }
+  },
+  ul {
+    margin-left: 50px;
   }
+}
+
+ul.contacts-list ul img {
+  width: 50px !important;
 }
