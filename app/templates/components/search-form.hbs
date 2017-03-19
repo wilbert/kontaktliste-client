@@ -1,17 +1,17 @@
-<form class="search-form" {{action "search" on="submit"}} method="get">
-
+<form class="search-form" method="get">
   <div class="row">
     <div class="col s6">
-      {{input type="text" value="" placeholder="Name, address, email"}}
+      {{input type="text" name="term" value=filterTerm placeholder="Name, address, email"}}
     </div>
     <div class="col s4">
-      <select class="sort" name="sort-term">
-        <option value="name">Name</option>
-        <option value="nationality">Nationality</option>
+      <select onchange={{action "change" value="target.value"}}>
+        {{#each sortOptions as |option|}}
+          <option value={{option}} selected={{eq sort option}}>{{option}}</option>
+        {{/each}}
       </select>
     </div>
     <div class="col s2">
-        <button type="submit" class="btn">Search</button>
+        <button type="submit" class="btn" {{action 'buttonClicked' filterTerm sort}}>{{buttonLabel}}</button>
     </div>
   </div>
   {{yield}}
