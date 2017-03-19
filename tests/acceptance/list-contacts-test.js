@@ -21,6 +21,6 @@ test('should redirect to contacts route', function (assert) {
 test('should list available contacts.', function (assert) {
   visit('/');
   andThen(function() {
-    assert.equal(find('.listing').length, 16, 'should see 16 contacts');
+    assert.equal(find('table .row').length, 16, 'should see 16 contacts');
   });
 });
