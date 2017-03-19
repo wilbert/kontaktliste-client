@@ -10,4 +10,6 @@ export default DS.Model.extend({
   country: DS.attr(),
   zipcode_city: DS.attr(),
   postal_address: DS.attr(),
+  children: DS.hasMany('contact', { inverse: 'parent' }),
+  parent: DS.belongsTo('contact', { inverse: 'children' })
 });

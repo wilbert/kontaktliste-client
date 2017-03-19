@@ -12,11 +12,13 @@ $roboto-font-path: '../assets/';
   }
 }
 
-table {
-  tr {
-    td.phones, td.address-info {
-      span {
-        display: block;
+ul.contacts-list {
+  li {
+    div.contact-row {
+      div.phones, div.address-info {
+        span {
+          display: block;
+        }
       }
     }
   }
