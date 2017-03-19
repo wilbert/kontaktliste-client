@@ -1,26 +1,31 @@
-{{outlet}}
-
-<div class="container">
-  <table>
-    <tbody>
-      {{#each model as |contact|}}
-        <tr class="row">
-          <td>
-            <h4>{{contact.name}}</h4>
-            {{contact.email}}
-          </td>
-          <td class="phones">
-            <span>
-               <i class="small material-icons">contact_phone</i>
-              {{contact.phone}}
-            </span>
-            <span>
-              <i class="small material-icons">settings_cell</i>
-              {{contact.mobile}}
-            </span>
-          </td>
-        </tr>
-      {{/each}}
-    </tbody>
-  </table>
-</div>
+{{search-form}}
+<table>
+  <tbody>
+    {{#each model as |contact|}}
+      <tr class="row">
+        <td>
+          <img src="{{contact.avatar}}" alt="{{contact.name}}">
+        </td>
+        <td>
+          <h4>{{contact.name}}</h4>
+          {{contact.email}}
+        </td>
+        <td class="phones">
+          <span>
+             <i class="small material-icons">contact_phone</i>
+            {{contact.phone}}
+          </span>
+          <span>
+            <i class="small material-icons">settings_cell</i>
+            {{contact.mobile}}
+          </span>
+        </td>
+        <td class="address-info">
+          <span class="small material-icons">location_on</span>
+          <span class="postal-address">{{contact.postal_address}}</span>
+          <span class="zipcode-city">{{contact.zipcode_city}}</span>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
