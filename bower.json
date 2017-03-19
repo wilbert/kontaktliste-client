@@ -1,6 +1,5 @@
 {
   "name": "kontakliste-client",
   "dependencies": {
-    "materialize": "0.98.0"
   }
 }
