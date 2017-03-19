@@ -6,5 +6,8 @@ export default DS.Model.extend({
   phone: DS.attr(),
   mobile: DS.attr(),
   gender: DS.attr(),
-  avatar: DS.attr()
+  avatar: DS.attr(),
+  country: DS.attr(),
+  zipcode_city: DS.attr(),
+  postal_address: DS.attr(),
 });
