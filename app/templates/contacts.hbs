@@ -1,0 +1,21 @@
+{{outlet}}
+
+<div class="container">
+  <table>
+    <tbody>
+      {{#each model as |contact|}}
+        <tr class="row">
+          <td>
+            <h4>{{contact.name}}</h4>
+            {{contact.email}}
+          </td>
+          <td>
+            <span>
+              {{contact.phone}}
+            </span>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
