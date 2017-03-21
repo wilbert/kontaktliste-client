@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
     updateContact(contactId, newManagerId) {
       this.store.findRecord('contact', contactId).then(function(contact) {
         contact.set('manager_id', newManagerId);
-        contact.save().then(transitionContacts);
+        contact.save();
       });
     }
   }

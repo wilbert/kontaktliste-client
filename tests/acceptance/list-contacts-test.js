@@ -1,5 +1,5 @@
 import { test } from 'qunit';
-import moduleForAcceptance from 'kontakliste-client/tests/helpers/module-for-acceptance';
+import moduleForAcceptance from 'kontaktliste-client/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | list contacts');
 

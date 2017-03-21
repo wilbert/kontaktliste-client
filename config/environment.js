@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'kontakliste-client',
+    modulePrefix: 'kontaktliste-client',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
