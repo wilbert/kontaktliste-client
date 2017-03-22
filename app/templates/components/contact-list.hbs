@@ -1,40 +1,42 @@
 <ul class='contacts-list'>
-  {{#each contacts as |contact|}}
-    <li>
-      <div class="contact">
-        {{#draggable-object content=contact}}
-          <div class="contact-row row" id="{{contact.id}}">
-            <div class="col s1.5">
-              <img src="{{contact.avatar}}" alt="{{contact.name}}" class="circle">
+  {{#sortable-objects sortableObjectList=contacts sortingScope='a' }}
+    {{#each contacts as |contact|}}
+      <li>
+        <div class="contact">
+          {{#draggable-object content=contact isSortable=true sortingScope='a'}}
+            <div class="contact-row row" id="{{contact.id}}">
+              <div class="col s1.5">
+                <img src="{{contact.avatar}}" alt="{{contact.name}}" class="circle">
+              </div>
+              <div class="col s3">
+                <h5>#{{contact.id}} {{contact.name}}</h5>
+                {{contact.email}}
+              </div>
+              <div class="phones col s3">
+                <span>
+                   <i class="small material-icons">contact_phone</i>
+                  {{contact.phone}}
+                </span>
+                <span>
+                  <i class="small material-icons">settings_cell</i>
+                  {{contact.mobile}}
+                </span>
+              </div>
+              <div class="address-info col s3.5">
+                <span class="small material-icons">location_on</span>
+                <span class="postal-address">{{contact.postal_address}}</span>
+                <span class="zipcode-city">{{contact.zipcode_city}}</span>
+              </div>
+              {{#draggable-object-target action='associate' managerId=contact.id}}
+                Drag here to increase rating
+              {{/draggable-object-target}}
             </div>
-            <div class="col s3">
-              <h5>#{{contact.id}} {{contact.name}}</h5>
-              {{contact.email}}
-            </div>
-            <div class="phones col s3">
-              <span>
-                 <i class="small material-icons">contact_phone</i>
-                {{contact.phone}}
-              </span>
-              <span>
-                <i class="small material-icons">settings_cell</i>
-                {{contact.mobile}}
-              </span>
-            </div>
-            <div class="address-info col s3.5">
-              <span class="small material-icons">location_on</span>
-              <span class="postal-address">{{contact.postal_address}}</span>
-              <span class="zipcode-city">{{contact.zipcode_city}}</span>
-            </div>
-            {{#draggable-object-target action='associate' managerId=contact.id}}
-              Drag here to increase rating
-            {{/draggable-object-target}}
-          </div>
-        {{/draggable-object}}
-        {{#if contact.children}}
-          {{contact-list contacts=contact.children}}
-        {{/if}}
-      </div>
-    </li>
-  {{/each}}
+          {{/draggable-object}}
+          {{#if contact.children}}
+            {{contact-list contacts=contact.children}}
+          {{/if}}
+        </div>
+      </li>
+    {{/each}}
+  {{/sortable-objects}}
 </ul>
