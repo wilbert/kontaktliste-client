@@ -7,6 +7,7 @@
             <div class="contact-row row" id="{{contact.id}}">
               <div class="col s1.5">
                 <img src="{{contact.avatar}}" alt="{{contact.name}}" class="circle">
+                {{world-flag contact.country}}
               </div>
               <div class="col s3">
                 <h5>#{{contact.id}} {{contact.name}}</h5>
@@ -28,7 +29,7 @@
                 <span class="zipcode-city">{{contact.zipcode_city}}</span>
               </div>
               {{#draggable-object-target action='associate' managerId=contact.id}}
-                Drag here to increase rating
+                Drag here to associate
               {{/draggable-object-target}}
             </div>
           {{/draggable-object}}
