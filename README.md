@@ -1,7 +1,6 @@
 # kontaktliste-client
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is the Kontaktliste Client based on [EmberJS](https://emberjs.com/).
 
 ## Prerequisites
 
@@ -22,7 +21,7 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember serve`
+* `ember server` or `ember s`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
 ### Code Generators
@@ -41,7 +40,18 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+This app uses ember-cli-deploy and deploys apps to S3, use this commands:
+
+`ember deploy production`
+
+Don't remember to configure you `.env.deploy.production` file like:
+
+```
+AWS_KEY=KEY
+AWS_SECRET=SECRET
+AWS_BUCKET=BUCKET_NAME
+AWS_REGION=AWS_REGION
+```
 
 ## Further Reading / Useful Links
 
