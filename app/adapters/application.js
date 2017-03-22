@@ -3,4 +3,5 @@ import config from '../config/environment';
 
 export default DS.RESTAdapter.extend({
   host: config.api_server,
+  namespace: 'api/v1'
 });
