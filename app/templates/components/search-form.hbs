@@ -1,18 +1,19 @@
 <form class="search-form" method="get">
-  <div class="row">
-    <div class="col s6">
+  <div class="form-inputs row">
+    <div class="col xl6 l6 s6 m6 alpha">
       {{input type="text" name="term" value=filterTerm placeholder="Name, address, email"}}
+      <i class="material-icons">search</i>
     </div>
-    <div class="col s4">
+    <div class="col xl4 l4 s4 m4 omega">
       <select onchange={{action "change" value="target.value"}}>
         {{#each sortOptions as |option|}}
           <option value={{option}} selected={{eq sort option}}>{{option}}</option>
         {{/each}}
       </select>
     </div>
-    <div class="col s2">
-        <button type="submit" class="btn" {{action 'buttonClicked' filterTerm sort}}>{{buttonLabel}}</button>
-    </div>
+  </div>
+  <div class="form-actions row">
+    <button type="submit" class="btn omega" {{action 'buttonClicked' filterTerm sort}}>{{buttonLabel}}</button>
   </div>
   {{yield}}
 </form>
