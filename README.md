@@ -2,6 +2,11 @@
 
 This is the Kontaktliste Client based on [EmberJS](https://emberjs.com/).
 
+### URLS
+
+* http://kontaktliste.insightsistemas.com.br - Production API environment (AWS load balanced)
+* http://kontaktliste-app.insightsistemas.com.br - Production Client
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
