@@ -197,3 +197,113 @@ ul.contacts-list {
 }
 
 /*************************** End Drag and Drop *****************************/
+
+@media (min-width: 900px) {
+  ul.contacts-list {
+    li {
+      div.contact-row {
+        div.phones, div.address-info {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    h1 {
+      font-size: 1.5em;
+      span { display: none; }
+    }
+  }
+
+  ul.contacts-list {
+    li {
+      div.contact-row {
+        .first-col, .last-col {
+          margin-bottom: 0;
+        }
+
+        div.phones, div.address-info {
+          height: 60px;
+        }
+      }
+    }
+  }
+
+  .draggable-object-target {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  ul.contacts-list {
+    li {
+      div.contact-row {
+        .contact-name {
+          p {
+            font-size: 1em;
+            line-height: 1em;
+
+            small {
+              font-size: 0.7em;
+            }
+          }
+        }
+
+        div.phones, div.address-info {
+          margin-top: 10px;
+
+          p {
+            font-size: 0.8em;
+
+            span {
+              font-size: 0.8em;
+
+              i {
+                top: -1px;
+              }
+            }
+          }
+        }
+
+        div.phones {
+          margin-left: 22%;
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  ul.contacts-list {
+    li {
+      div.contact-row {
+        div.phones, div.address-info {
+          width: 100% ;
+          margin-top: 0;
+          margin-left: 33.33333%;
+          height: 40px;
+
+          p {
+            span {
+              font-size: 0.8em;
+
+              i {
+                top: -1px;
+              }
+            }
+          }
+        }
+      }
+
+      .contacts-children {
+        .contact-name {
+          width: 63%;
+        }
+      }
+    }
+  }
+}
