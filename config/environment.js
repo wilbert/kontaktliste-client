@@ -30,6 +30,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.api_server = 'http://127.0.0.1:3000'
+    // ENV.api_server = 'http://kontaktliste.insightsistemas.com.br';
   }
 
   if (environment === 'test') {

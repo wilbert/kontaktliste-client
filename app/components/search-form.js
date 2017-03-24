@@ -8,7 +8,7 @@ export default Ember.Component.extend({
     Ember.$('select').material_select();
   },
   actions: {
-    buttonClicked(filterTerm, sort) {
+    buttonClicked(filterTerm) {
       this.sendAction('action', filterTerm, this.get('sortOption'));
     },
     change(sortOption) {
