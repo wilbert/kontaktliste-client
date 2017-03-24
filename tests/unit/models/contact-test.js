@@ -10,3 +10,13 @@ test('it exists', function(assert) {
   // let store = this.store();
   assert.ok(!!model);
 });
+
+// test('should return face center x', function(assert) {
+//   let model = this.subject({ face_center_x: 66 });
+//
+//   // Ember.run(function(){
+//   //   model.setLeftPosition()
+//   // });
+//
+//   assert.equal(model.left_position, -6);
+// });
